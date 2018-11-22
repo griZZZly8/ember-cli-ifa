@@ -4,7 +4,7 @@ import AssetMap from '../services/asset-map';
 import { typeOf as getTypeOf } from '@ember/utils';
 import getAssetMapData from 'ember-cli-ifa/utils/get-asset-map-data';
 
-export function initialize(app) {
+export function initialize(container, app) {
   let assetMapFile = getAssetMapData();
 
   // This is split out like this, in order to prevent this from being accidentally replaced
