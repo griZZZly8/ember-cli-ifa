@@ -62,9 +62,7 @@ module.exports = {
 
     // Prepend the URL of the assetMap with the location defined in fingerprint
     // options.
-    if (this.app && this.app.options && this.app.options.fingerprint) {
-      fingerprintPrepend = this.app.options.fingerprint.prepend;
-    }
+    fingerprintPrepend = this.project.config(env).assetsURL;
 
     let assetFileNamePath = `${build.directory}/assets/${assetFileName}`;
 
